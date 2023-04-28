@@ -1,6 +1,10 @@
 .idea/*
+
 paraphraseproject/.env
 /.env
+
 paraphraseproject/__pycache__/*
 paraphraseproject/paraphraseproject/__pycache__/*
 /__pycache__/*
+
+paraphraseproject/db.sqlite3

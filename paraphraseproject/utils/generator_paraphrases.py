@@ -2,7 +2,7 @@
 The module implements a function that generates
 permutations of child nouns with each other.
 """
-
+import re
 from itertools import permutations, product
 from typing import List, Tuple, Optional, Union
 
@@ -107,7 +107,7 @@ def tree_to_str(func):
     Сonverts tree.Tree objects to type str.
     """
     def wrapper(*args, **kwargs) -> List[str]:
-        return list(map(str, func(*args, **kwargs)))
+        return list(map(lambda x: re.sub('\s+', ' ', str(x).replace('\n', '')), func(*args, **kwargs)))
     return wrapper
 
 
